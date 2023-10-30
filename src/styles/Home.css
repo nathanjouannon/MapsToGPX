@@ -1,0 +1,19 @@
+.home-container {
+    padding: 20px;
+    background-color: #FEFEFE;
+}
+
+/* map */
+.map-container {
+    width: 100%;
+    height: 510px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    /* à enlever */
+    border: 0.25px solid #25252584;
+}
+.leaflet-container {
+    width: 100%;
+    height: 100%;
+}
