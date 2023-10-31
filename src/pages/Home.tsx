@@ -1,12 +1,11 @@
 // import { NavLink } from "react-router-dom";
 import { useState , useRef, useEffect} from "react"
 import "../styles/Home.css"
-import { MapContainer, TileLayer, FeatureGroup } from 'react-leaflet'
-import { Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, FeatureGroup, Marker, Popup } from 'react-leaflet'
 import { EditControl } from "react-leaflet-draw"
 import osm from '../Osm-provider'
-import 'leaflet/dist/leaflet.css'
-import 'leaflet-draw/dist/leaflet.draw.css'
+import L from 'leaflet'
+// import LeafletGeocoder from "../leafletGeocoder"
 
 interface Position {
     lat: number,
@@ -36,7 +35,6 @@ function Home() {
     return (
         <>
             <div className="home-container">
-                <h1>Carte</h1>
                 <div className="map-container" id="map">
                     <MapContainer
                         center={[position.lat, position.long]}
@@ -68,6 +66,7 @@ function Home() {
                                 onCreated={_createMarker}
                             />
                         </FeatureGroup>
+                        {/* <LeafletGeocoder /> */}
                     </MapContainer>
                 </div>
                 <button onClick={() => {
@@ -78,5 +77,6 @@ function Home() {
         </>
     )
 }
+
 
 export default Home;
