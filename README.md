@@ -26,3 +26,14 @@ If you are developing a production application, we recommend updating the config
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 # MapsToGPX
+
+## run localy :
+```npm i
+   npm run dev
+```
+serve on port localhost5173
+
+## Distant Acces : 
+- https://maps-to-gpx.vercel.app/
+
+
