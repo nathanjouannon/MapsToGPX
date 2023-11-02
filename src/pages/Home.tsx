@@ -84,6 +84,7 @@ function Home() {
 const defaultIcon = L.icon({
     iconUrl: LocationIcon,
     iconSize: [30, 30],
+    iconAnchor: [15, 30],
 });
 L.Marker.prototype.options.icon = defaultIcon;
 
