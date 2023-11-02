@@ -69,7 +69,7 @@ function Home() {
                             />
                         </FeatureGroup>
                         {/* <LeafletGeocoder /> */}
-                        <RoutingMachine waypoints={wayPoints} />
+                        <RoutingMachine />
                     </MapContainer>
                 </div>
                 <button onClick={() => {
