@@ -3,9 +3,8 @@ import { useState , useRef, useEffect} from "react"
 import "../styles/Home.css"
 import { MapContainer, TileLayer, FeatureGroup, Marker, Popup } from 'react-leaflet'
 import { EditControl } from "react-leaflet-draw"
-import osm from '../Osm-provider'
-import L, { map } from 'leaflet'
-import 'leaflet-routing-machine';
+import osm from "../Osm-provider"
+import RoutingMachine from "../RoutingMachine"
 // import LeafletGeocoder from "../leafletGeocoder"
 
 interface Position {
@@ -30,7 +29,12 @@ function Home() {
         });
     }
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const _createMarker = (e: any) => { console.log(e)}
+    const wayPoints: any[] = [{ lat: 45.733721, lng: 5.984897}, {lat: 45.733721, lng: 5.984897}]
+    const _createMarker = (e: any) => { 
+        console.log(e.layer._latlng.lat, e.layer._latlng.lng)
+        wayPoints.push({lat :e.layer._latlng.lat, lng: e.layer._latlng.lng})
+        console.log(wayPoints)
+    }
 
     return (
         <>
@@ -67,13 +71,7 @@ function Home() {
                             />
                         </FeatureGroup>
                         {/* <LeafletGeocoder /> */}
-
-                        {L.Routing.control({
-                            waypoints: [
-                              L.latLng(45.6947, 5.8915), // Point de départ
-                              L.latLng(45.7056, 5.8964), // Point d'arrivée
-                            ]}).addTo(mapRef.current.leafletElement)
-                        }
+                        <RoutingMachine wayPoints={wayPoints}/>
                     </MapContainer>
                 </div>
                 <button onClick={() => {
