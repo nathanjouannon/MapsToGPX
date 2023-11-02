@@ -4,6 +4,7 @@ import { createControlComponent } from "@react-leaflet/core";
 import "leaflet-routing-machine";
 
 const createRoutineMachineLayer = (props: ControlOptions) => {
+  console.log(props);
     const instance = L.Routing.control({
       waypoints: [
         L.latLng(57.74, 11.94),

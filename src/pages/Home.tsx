@@ -1,7 +1,7 @@
 // import { NavLink } from "react-router-dom";
 import { useState , useRef, useEffect} from "react"
 import "../styles/Home.css"
-import { MapContainer, TileLayer, FeatureGroup, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, FeatureGroup, Marker } from 'react-leaflet'
 import { EditControl } from "react-leaflet-draw"
 import L from "leaflet"
 import osm from "../Osm-provider"
