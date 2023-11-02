@@ -28,8 +28,9 @@ If you are developing a production application, we recommend updating the config
 # MapsToGPX
 
 ## run localy :
-```npm i
-   npm run dev
+```npm
+npm i
+npm run dev
 ```
 serve on port localhost5173
 
